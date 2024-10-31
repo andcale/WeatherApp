@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,26 +7,29 @@
     <title>WeatherApp</title>
     <link rel="stylesheet" href="/src/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="shortcut icon" href="https://img.icons8.com/?size=100&id=P9tT31QGJr_S&format=png&color=000000" type="image/x-icon">
 </head>
 <body>
     <main id="container">
         
         <form id="search">
-            <i class="fa-solid fa-location-dot" style="color: #22096c;"></i>
-            <input type="search" placeholder="Procurar cidade..." id="search-city">
-            <button type="submit">
+            <i class="fa-solid fa-location-dot" id="loc"></i>
+            <input type="text" placeholder="Procurar cidade..." id="search-input">
+            <button type="submit" id="submit">
                 <i class="fa-solid fa-magnifying-glass"></i>
             </button>
         </form>
 
         <section id="weather">
            
-            <h1 id="title">Maricá, BR</h1>
+            <h1 id="cityLocation" title="Cidade"></h1>
             
             <div id="temp-info">
                 <img id="temp-img" alt="temp-img" src="http://openweathermap.org/img/wn/04d@2x.png">
-                <p id="temp-value">28C</p>
-                <p id="temp-description">Nublado</p>
+                <div>    
+                    <p id="temp-value"></p>
+                    <p id="temp-description"></p>
+                </div>
             </div>
             
             <div id="other-infos">
@@ -34,7 +38,7 @@
                     <div>
                         <h2>Temp. Max</h2>
                         <p id="temp-max">
-                            29C
+                            
                         </p>
                     </div>
                 </div>
@@ -44,17 +48,17 @@
                     <div>
                         <h2>Temp. Min</h2>
                         <p id="temp-min">
-                            2C
+                            
                         </p>
                     </div>
                 </div>
 
                 <div class="info">
-                    <i id="humidity-icon" class="fa-solid fa-droplet"></i>
+                    <i id="umidity-icon" class="fa-solid fa-droplet"></i>
                     <div>
-                        <h2>Humidade</h2>
+                        <h2>Umidade</h2>
                         <p id="humidity">
-                            29C
+                            
                         </p>
                     </div>
                 </div>
@@ -62,19 +66,23 @@
                 <div class="info">
                     <i id="wind-icon" class="fa-solid fa-wind"></i>
                     <div>
-                        <h2>Vendo</h2>
+                        <h2>Vento</h2>
                         <p id="wind">
-                            50km/h
+                            
                         </p>
                     </div>
                 </div>
             </div>
 
         </section>
-
         <section id="alert"></section>
-
+        
     </main>
+    <footer>
+        <div>
+            <p>Feito por <!--<a href="https://www.linkedin.com/in/calebe-andrade">-->Calebe de Andrade</a></p>
+        </div>
+    </footer>
     <script src="src/script.js"></script>
 </body>
 </html>

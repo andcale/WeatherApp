@@ -1,24 +1,203 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 *{
     margin: 0;
     padding: 0;
-    font-family: "Ubuntu", sans-serif;
+    font-family:'Poppins',sans-serif;
     font-size: 1rem;
     box-sizing: border-box;
 }
 
 body{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    background: linear-gradient(#6ebddd, #590bc5);
+    height: 100vh;
+    background: linear-gradient(#cafcc8, #4a7c4a);
+}
+
+footer{
+    margin-top: 20px;
+
+}
+footer p{
+    font-size: 12px;
+    background-color: rgba(245, 222, 179, 0.151);
+    border-radius: 8px;
+    padding: 6px;
+    font-weight: bold;
+}
+footer p a{
+    text-decoration: none;
+    font-size: 1em;
+    color: black;
+}
+footer p a:visited{
+    color:black;
 }
 
 #container{
-    background-color: aliceblue;
+    background-color: rgba(255, 255, 255, 0.719);
     padding: 20px;
-    border-radius: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.377);
+    
 
+}
+#title{
+    text-align: center;
+    padding-bottom: 20px;
+    font-size: 20px;
+}
+
+#loc{
+    cursor: pointer;
+    font-size: 25px;
+    color: #4a7c4a;
+    margin-left: 8px;
+}
+
+#search{
+    display: flex;
+    border: 0.5px solid rgba(51, 51, 51, 0.37);
+    justify-content: space-evenly;
+    border-radius: 20px;
+    gap: 10px;
+    align-items: center;
+    background-color: white;
+    padding: 4px;
+        
+}
+
+#search input{
+    border:none;
+    font-size: 15px;
+    font-weight: 500;
+    outline: none;
+    border: none ;
+    background-color: transparent;        
+}
+
+#search button{
+    border: none;
+    background-color: transparent;
+    background-color: #bebebe;
+    cursor: pointer;
+    padding: 3px 6px ;
+    border-radius: 20px;
+}   
+
+#search button:hover{
+    background-color: #3ef76c;
+}
+
+#weather{
+    margin-top: 20px;
+    display: none;
+}
+#weather.show{
+    display: block;
+}
+
+#weather #cityLocation{
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-size: 1.7em;
+    font-weight: 600;
+    text-shadow: 0px 0px .6px rgba(5, 5, 5, 0.459);
+}
+
+#temp-info{
+    margin-top: 20px;
+    background-color: rgba(56, 85, 55, 0.411);
+    display: flex;
+    justify-content: space-evenly;
+    border-radius: 20px;
+    align-items: center;
+    cursor: pointer ;
+    transition: all 0.2s;
+    box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.26);
+    
+}
+#temp-info:hover{
+    transform: scale(1.05);
+
+}
+
+#temp-img{
+    filter: drop-shadow(3px 2px 2px rgba(0, 0, 0, 0.534)) ;
+
+}
+#temp-value {
+    font-weight: bold;
+    border:1 black;
+    font-size: 40px;
+    text-shadow: 0px 0px 3px #0000005e;
+    color: white;
+}
+#temp-description {
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: capitalize;
+    text-shadow: 0px 0px 3px #0000005e;
+    color: rgb(245, 245, 245);
+    
+}
+
+#other-infos{
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+#other-infos .info{
+    box-shadow: 0px 0px 10px  rgba(0, 0, 0, 0.377);
+    border-radius: 12px;
+    display: flex;
+    justify-content: start;
+    text-align: center;
+    padding: 9px;
+    gap: 15px;
+    transition: all 0.2s;
+    cursor: pointer;
+    background-color: rgba(252, 252, 252, 0.575);
+
+}
+
+#other-infos .info:hover{
+    transform: scale(1.05);
+}
+
+#other-infos .info h2{
+    font-weight: 450;
+    font-size: 14px;
+    
+}
+
+#other-infos .info i{
+    font-size: 25px;
+    width: 20%;
+
+}
+
+#temp-max-icon{
+    color: rgb(206, 132, 71);
+}
+
+#temp-min-icon{
+    color: rgb(2, 92, 167);
+}
+
+#umidity-icon{
+    color: rgb(74, 95, 165);
+}
+
+#wind-icon{
+    color: rgb(125, 125, 126);
+}
+
+#alert{
+    margin-top: 10px;
+    text-align: center;
 }
