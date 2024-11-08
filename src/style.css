@@ -13,7 +13,7 @@ body{
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: linear-gradient(#cafcc8, #4a7c4a);
+    background-color: #166c94;
 }
 
 footer{
@@ -50,8 +50,11 @@ footer p a:visited{
 #loc{
     cursor: pointer;
     font-size: 25px;
-    color: #4a7c4a;
+    color: #050781;
     margin-left: 8px;
+}
+#loc:hover{
+    color: #1449db;;
 }
 
 #search{
@@ -84,7 +87,7 @@ footer p a:visited{
 }   
 
 #search button:hover{
-    background-color: #3ef76c;
+    background-color: #3ed2f7;
 }
 
 #weather{
@@ -104,7 +107,7 @@ footer p a:visited{
 
 #temp-info{
     margin-top: 20px;
-    background-color: rgba(56, 85, 55, 0.411);
+    background-color: rgba(8, 108, 238, 0.808);
     display: flex;
     justify-content: space-evenly;
     border-radius: 20px;
